@@ -23,7 +23,7 @@ class Platform
      */
     private $isAllowed;
 
-    public function __construct(array $platforms, string $relationship)
+    public function __construct(array $platforms, bool $isAllowed)
     {
         if (empty($platforms)) {
             throw new UnexpectedValueException('Platform list must not be empty');
@@ -37,7 +37,7 @@ class Platform
             }
         }
         $this->platforms = $platforms;
-        $this->isAllowed = $relationship;
+        $this->isAllowed = $isAllowed;
     }
 
     /**
